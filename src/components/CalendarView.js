@@ -10,7 +10,7 @@ function CalendarView({ data }) {
   return (
     <div className="calendar-view card">
       <div className="calendar-header">
-        <h3 className="month-year">{month} {year}</h3>
+        <h3 className="month-year">{month} May {year} 2025</h3>
         <span className="this-week-text">This Week </span>
         <div className="calendar-nav-arrows">
           <span>&lt;</span>
