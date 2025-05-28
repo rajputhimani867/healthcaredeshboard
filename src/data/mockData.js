@@ -1,5 +1,5 @@
 export const navLinks = [
-  { icon: '🏠', text: 'Dashboard' }, // Replace with actual SVG/Image imports
+  { icon: '🏠', text: 'Dashboard' },
   { icon: '⏳', text: 'History' },
   { icon: '📅', text: 'Calendar' },
   { icon: '🗓️', text: 'Appointments' },
@@ -11,21 +11,21 @@ export const navLinks = [
 ];
 
 export const anatomyData = [
-  { id: 'heart', label: 'Healthy Heart', status: 'healthy', top: '45%', left: '48%' }, // Adjust positions precisely
+  { id: 'heart', label: 'Healthy Heart', status: 'healthy', top: '45%', left: '48%' },
   { id: 'lungs', label: 'Lungs', status: 'unhealthy', top: '30%', left: '40%' },
   { id: 'teeth', label: 'Teeth', status: 'healthy', top: '15%', left: '45%' },
   { id: 'bone', label: 'Bone', status: 'healthy', top: '70%', left: '50%' },
 ];
 
 export const healthStatusCards = [
-  { organ: 'Lungs', date: '28 Oct 2021', status: 'unhealthy', color: 'var(--unhealthy-red)' },
-  { organ: 'Teeth', date: '28 Oct 2021', status: 'healthy', color: 'var(--healthy-green)' },
-  { organ: 'Bone', date: '28 Oct 2021', status: 'healthy', color: 'var(--healthy-green)' },
+  { organ: 'Lungs', date: '28 may 2025', status: 'unhealthy', color: 'var(--unhealthy-red)' },
+  { organ: 'Teeth', date: '28 may 2025', status: 'healthy', color: 'var(--healthy-green)' },
+  { organ: 'Bone', date: '28 may 2025', status: 'healthy', color: 'var(--healthy-green)' },
 ];
 
 export const calendarData = {
-  month: 'October',
-  year: 2021,
+  month: 'May',
+  year: 2025,
   days: [
     { day: 25, weekday: 'Mon', appointments: ['10:00', '12:00'] },
     { day: 26, weekday: 'Tues', appointments: ['09:00', '10:00'] },
