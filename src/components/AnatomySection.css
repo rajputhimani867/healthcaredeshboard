@@ -1,0 +1,94 @@
+.anatomy-section {
+  flex: 2; /* Takes more space in flex container */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px; /* Ensure sufficient height for the image */
+}
+
+.human-body-container {
+  left: 15% !important;
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Adjust max width of the image for better scaling */
+  height: auto;
+}
+
+.human-body-image {
+    width: 46%;
+    height: 100%;
+    display: block;
+}
+
+.health-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent text wrapping */
+  transform: translate(-50%, -50%); /* Center based on top/left */
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.health-indicator.healthy .indicator-dot {
+  background-color: var(--healthy-green);
+}
+
+.health-indicator.unhealthy .indicator-dot {
+  background-color: var(--unhealthy-red);
+}
+
+.health-indicator.healthy .indicator-label {
+  color: var(--healthy-green);
+}
+
+.health-indicator.unhealthy .indicator-label {
+  color: var(--unhealthy-red);
+}
+
+/* Adjust specific indicator positions to match image */
+/* These are just examples, you'll need to fine-tune based on your image */
+.health-indicator:nth-child(2) { /* Healthy Heart */
+  top: 32% !important;
+    left: 44% !important;
+}
+
+.health-indicator:nth-child(3) { /* Lungs */
+ top: 25% !important;
+    left: 5% !important;
+}
+
+.health-indicator:nth-child(4) { /* Teeth */
+  top: 11% !important;
+    left: 38% !important;
+}
+
+.health-indicator:nth-child(5) { /* Bone */
+  top: 63% !important;
+   left: 42% !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .health-indicator {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+
+  .indicator-dot {
+    width: 6px;
+    height: 6px;
+  }
+}

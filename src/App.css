@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.app-container {
+  display: flex;
+  width: 100%;
+  gap: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-content-wrapper {
+  margin-left: 23%; /* same as .sidebar width */
+  width: 77%; /* remaining width */
   min-height: 100vh;
+  overflow-y: auto;
+  background-color: var(--dashboard-bg);
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: var(--spacing-lg);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column; /* Stack sidebar and main content vertically */
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    width: 100%; /* Full width for sidebar on smaller screens */
+    height: auto; /* Auto height */
+    padding: var(--spacing-md);
+  }
+
+  .main-content-wrapper {
+    padding: var(--spacing-md);
+    margin-left: 0% !important;
+    width: 100%;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    padding: var(--spacing-sm);
   }
 }

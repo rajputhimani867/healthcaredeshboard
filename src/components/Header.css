@@ -1,0 +1,127 @@
+.header {
+  margin-bottom: 0px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg); /* Space below the header */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--dashboard-bg);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.search-icon {
+  margin-right: var(--spacing-xs);
+  color: var(--text-color-light);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--text-color-dark);
+  width: 200px; /* Adjust as needed */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.notification-icon,
+.add-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--dashboard-bg);
+  color: var(--text-color-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.add-button {
+  background-color: var(--primary-blue);
+  color: white;
+  font-size: 1.8rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 500;
+  color: var(--text-color-dark);
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items when wrapped */
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+    width: 96%;
+    margin: 0px auto;
+  }
+
+  .header-left, .header-right {
+    width: 100%; /* Take full width on smaller screens */
+    justify-content: center;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .search-bar {
+    flex-grow: 1; /* Allow search bar to expand */
+    width: auto; /* Reset width */
+  }
+
+  .user-profile {
+    display: none; /* Hide user name on very small screens if desired */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.2rem;
+  }
+  .search-input {
+    width: 120px;
+  }
+}

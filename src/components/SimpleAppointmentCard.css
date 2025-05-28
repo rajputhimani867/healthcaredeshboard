@@ -1,0 +1,50 @@
+.simple-appointment-card {
+  background-color: var(--dashboard-bg);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: var(--primary-blue); /* Or a subtle gray */
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--text-color-dark);
+  font-size: 1rem;
+}
+
+.card-time {
+  font-size: 0.85rem;
+  color: var(--text-color-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .simple-appointment-card {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .card-icon {
+    font-size: 1.2rem;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card-time {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,72 @@
+.dashboard-main-content {
+  flex-grow: 1;
+  padding: var(--spacing-lg); /* Padding around the entire main content */
+  background-color: var(--dashboard-bg);
+}
+
+.dashboard-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-color-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Two columns, left wider than right */
+  grid-template-rows: auto auto; /* Two rows, auto height */
+  gap: var(--spacing-lg); /* Gap between grid items */
+  /* Define grid areas for easier placement */
+  grid-template-areas:
+    "overview calendar"
+    "activity schedule";
+}
+
+.dashboard-overview-area {
+  grid-area: overview;
+}
+
+.calendar-view-area {
+  grid-area: calendar;
+}
+
+.upcoming-schedule-area {
+  grid-area: schedule;
+}
+
+.activity-feed-area {
+  grid-area: activity;
+}
+
+/* Responsive adjustments for DashboardMainContent */
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-areas:
+      "overview"
+      "calendar"
+      "schedule"
+      "activity"; /* Stack all items */
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main-content {
+    padding: var(--spacing-md);
+  }
+
+  .dashboard-heading {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .dashboard-grid {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main-content {
+    padding: var(--spacing-sm);
+  }
+}

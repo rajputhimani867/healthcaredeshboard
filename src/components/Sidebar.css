@@ -1,0 +1,186 @@
+.sidebar {
+  width: 23%;
+  background-color: var(--sidebar-bg);
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  border-right: 1px solid var(--border-color);
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Fixes the sidebar */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+
+.sidebar-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sidebar-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-blue); /* Or dark text color */
+}
+
+.nav-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.nav-heading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color-light);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md); /* Align with links */
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-bottom: var(--spacing-xs);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-decoration: none;
+  color: var(--text-color-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--dashboard-bg); /* Highlight on hover */
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  color: var(--text-color-light); /* Icon color */
+}
+
+/* Specific styling for the active Dashboard link (if any is implied) */
+.nav-link.active {
+  background-color: var(--primary-blue); /* Example active state */
+  color: white;
+}
+
+.nav-link.active .nav-icon {
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto; /* Pushes the footer to the bottom */
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color); /* Optional separator */
+  text-align: center;
+}
+
+.setting-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  padding: var(--spacing-sm);
+  cursor: pointer;
+}
+
+.setting-icon {
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments for Sidebar */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height based on content */
+    position: relative; /* No longer sticky, flows with content */
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    flex-direction: row; /* Layout horizontally for easier navigation */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-header {
+    margin-bottom: 0;
+  }
+
+  .sidebar-nav {
+    display: flex; /* Make nav items horizontal */
+    overflow-x: auto; /* Enable horizontal scrolling if many links */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--spacing-xs); /* Space for scrollbar */
+  }
+
+  .nav-section {
+    margin-bottom: 0;
+    margin-right: var(--spacing-md);
+  }
+
+  .nav-heading {
+    display: none; /* Hide heading when horizontal */
+  }
+
+  .sidebar-nav ul {
+    display: flex; /* Make list items horizontal */
+    gap: var(--spacing-md); /* Space between horizontal links */
+    position: relative !important;
+        margin-top: 13px !important;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  .nav-link {
+    flex-direction: column; /* Stack icon and text */
+    text-align: center;
+    padding: var(--spacing-sm);
+    gap: var(--spacing-xs);
+  }
+
+  .sidebar-footer {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .setting-link span:last-child {
+    display: none; /* Hide "Setting" text on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: var(--spacing-sm);
+  }
+
+  .sidebar-title {
+    font-size: 28px;
+    position: absolute !important;
+    top: 5px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-nav {
+    gap: var(--spacing-sm);
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}

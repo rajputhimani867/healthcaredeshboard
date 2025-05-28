@@ -1,0 +1,72 @@
+.health-status-cards {
+  flex: 1; /* Takes less space than anatomy */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg); /* To align with the layout in the image */
+}
+
+.status-card {
+    padding: 10px 10px !important;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  border: 1px solid var(--border-color); /* Subtle border */
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+.status-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-organ {
+  font-weight: 600;
+  color: var(--text-color-dark);
+  font-size: 12px;
+}
+
+.status-date {
+  color: var(--text-color-light);
+ font-size: 10px;
+  margin-left: auto; /* Pushes date to the right */
+}
+
+.status-details {
+  font-size: 0.8rem;
+  color: var(--primary-blue); /* Or a highlight color */
+  cursor: pointer;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .health-status-cards {
+    margin-top: var(--spacing-md); /* Adjust margin when stacked */
+  }
+}
+
+@media (max-width: 768px) {
+  .status-card {
+    padding: var(--spacing-sm);
+  }
+  .status-organ{
+    font-size: 18px;
+  }
+  .status-date{
+       font-size: 16px;
+  }
+}
